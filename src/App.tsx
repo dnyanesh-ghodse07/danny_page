@@ -1,23 +1,15 @@
-import React from 'react';
-import Navbar from './components/Navbar/Navbar';
-import Header from './components/Header/Header';
 import './App.scss';
-import Skills from './components/Skills/Skills';
-import Projects from './components/Projects/Projects';
-import Form from './components/Form/Form';
+import Home from './components/Home/Home';
+import PageRoutes from './routes/routes';
+import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 
 function App() {
   return (
     <div className='app'>
-      <Navbar/>
-      <div className="main-wrapper">
-        <Header/>
-        <Skills/>
-        <Projects />
-        <Form/>
-      </div>
-        <Footer/>
+      <Navbar />
+      <PageRoutes />
+      <Footer />
     </div>
   );
 }

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import ham from '../../assests/menu.svg'
 import "./Navbar.scss"
+import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [width, setWidth] = useState<number>(0);
-  const [visible, setVisible] = useState<boolean>(true);
+  const [visible, setVisible] = useState<boolean>();
 
   useEffect(() => {
     updateWidth();
@@ -14,13 +15,18 @@ const Navbar = () => {
   const updateWidth = () => {
     const inWidth = window.innerWidth;
     setWidth(inWidth);
+    if(width > 600){
+      setVisible(false)
+    }
   }
 
   return (
     <div className='navbar'>
       <div className="nav">
         <div className="logo">
+          <Link to="/">
           Dnyanesh
+          </Link> 
         </div>
         {
           width < 600 ? <button className="ham_icon" onClick={() => setVisible(!visible)}>
@@ -28,16 +34,16 @@ const Navbar = () => {
         </button> : <div className="nav_links">
           <ul>
             <li>
-              <a href="">About</a>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <a href="">Skills</a>
+              <Link to="/skills">Skills</Link>
             </li>
             <li>
-              <a href="">Projects</a>
+              <Link to="/projects">Projects</Link>
             </li>
             <li>
-              <a href="">Contact</a>
+              <Link to="/contacts">Contact</Link>
             </li>
           </ul>
         </div>

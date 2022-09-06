@@ -1,4 +1,22 @@
 .skills{
     height: 300px;
     background: #efb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    .skill-card{
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        background: #fff;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .card-title{
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+    }
 }
