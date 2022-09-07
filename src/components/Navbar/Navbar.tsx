@@ -15,7 +15,7 @@ const Navbar = () => {
   const updateWidth = () => {
     const inWidth = window.innerWidth;
     setWidth(inWidth);
-    if(width > 600){
+    if (width > 600) {
       setVisible(false)
     }
   }
@@ -25,46 +25,46 @@ const Navbar = () => {
       <div className="nav">
         <div className="logo">
           <Link to="/">
-          Dnyanesh
-          </Link> 
+            Dnyanesh
+          </Link>
         </div>
         {
           width < 600 ? <button className="ham_icon" onClick={() => setVisible(!visible)}>
-          <img src={ham} alt="" />
-        </button> : <div className="nav_links">
-          <ul>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/skills">Skills</Link>
-            </li>
-            <li>
-              <Link to="/projects">Projects</Link>
-            </li>
-            <li>
-              <Link to="/contacts">Contact</Link>
-            </li>
-          </ul>
-        </div>
+            <img src={ham} alt="" />
+          </button> : <div className="nav_links">
+            <ul>
+              <li>
+                <Link to="/about">About</Link>
+              </li>
+              <li>
+                <Link to="/skills">Skills</Link>
+              </li>
+              <li>
+                <Link to="/projects">Projects</Link>
+              </li>
+              <li>
+                <Link to="/contacts">Contact</Link>
+              </li>
+            </ul>
+          </div>
         }
         {
           visible && <div className="ham_menu">
-          <ul>
-            <li>
-              <a href="">About</a>
-            </li>
-            <li>
-              <a href="">Skills</a>
-            </li>
-            <li>
-              <a href="">Projects</a>
-            </li>
-            <li>
-              <a href="">Contact</a>
-            </li>
-          </ul>
-        </div>
+            <ul>
+              <li>
+                <Link to="/about">About</Link>
+              </li>
+              <li>
+                <Link to="/skills">Skills</Link>
+              </li>
+              <li>
+                <Link to="/projects">Projects</Link>
+              </li>
+              <li>
+                <Link to="/contacts">Contact</Link>
+              </li>
+            </ul>
+          </div>
         }
       </div>
     </div>

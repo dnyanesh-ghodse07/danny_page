@@ -4,11 +4,38 @@
     background: url("../../assests/endless-constellation.svg");
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 10px;
-    h1{
+    position: relative;
+    .title{
+        font-size: 30px;
+        font-weight: 600;
         color: #fff;
         width: auto;
     }
     p{
-        color: #fff;
+        color: rgb(224, 219, 219);
     }
+    .social-icons{
+        position: absolute;
+        bottom: 30px;
+        left: 20px;
+        display: flex;
+        align-items: baseline;
+        border-radius: 10px;
+        .icons{
+            // box-shadow: rgba(250, 250, 250, 0.597) 0px 8px 24px;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            cursor: pointer;
+            padding: 10px 0;
+            padding-left: 10px;
+            .icon{  
+                font-size: 30px;
+            }
+            span{
+                font-size: 14px;
+            }
+        }
+    }
+
 }

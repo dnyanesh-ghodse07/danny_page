@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import { InstagramOutlined, LinkedinOutlined, GithubOutlined, MailOutlined} from '@ant-design/icons';
 import "./Header.scss"
 import { gsap } from 'gsap'
 
@@ -10,13 +11,28 @@ const Header = () => {
   return (
     <div className='header'>
       <div>
-        <h1 ref={headRef}>
+        <div ref={headRef} className='title'>
           Dnyanesh Ghodse
-        </h1><br />
+        </div><br />
         <p>Front End Engineer</p>
       </div>
       <div className='social-icons'>
-        
+        <div className="icons">
+          <MailOutlined color='red' className='icon'/>
+          {/* <span>Mail</span> */}
+        </div>
+        <div className="icons" >
+          <GithubOutlined className='icon'/>
+          {/* <span>Github</span> */}
+        </div>
+        <div className="icons">
+          <LinkedinOutlined className='icon'/>
+          {/* <span>LinkedIn</span> */}
+        </div>
+        <div className="icons">
+          <InstagramOutlined className='icon'/>
+          {/* <span>Instagram</span> */}
+        </div>
       </div>
     </div>
   )
