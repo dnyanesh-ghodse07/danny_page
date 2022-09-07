@@ -20,7 +20,6 @@
 
         .nav_links {
             width: 50%;
-
             ul {
                 display: flex;
                 justify-content: space-between;
@@ -47,6 +46,7 @@
         }
         .ham_menu{
             display: flex;
+            z-index: 10;
             justify-content: center;
             background: #fff;
             box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
